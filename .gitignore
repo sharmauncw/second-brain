@@ -1,0 +1,35 @@
+# Second Brain — privacy defaults
+#
+# The whole point: you can version the SYSTEM without ever committing your LIFE.
+# The filled-in files below are ignored by default. Templates (*.template.md)
+# are NOT ignored — those are safe to share.
+
+# Your real identity and memory files (filled-in versions)
+/USER.md
+/SOUL.md
+/AGENTS.md
+/MEMORY.md
+/taste-profile.md
+
+# Daily logs — your actual days are nobody's business
+/memory/*.md
+!/memory/daily-log.md
+
+# Real people and group pages (templates stay tracked)
+/memory/people/*.md
+!/memory/people/INDEX.md
+!/memory/people/person-example.md
+/memory/groups/*.md
+
+# Audit ledgers hold real promises and real names
+/audits/*.md
+!/audits/promise-audit.md
+
+# Anything else personal you add later
+/private/
+*.private.md
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
