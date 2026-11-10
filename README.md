@@ -2,6 +2,10 @@
 
 **Markdown files that remember, rules that verify. The memory system behind AI Radar with Akanksha.**
 
+![The Second Brain memory graph — a golden node network on deep ink, its parts labelled: MEMORY.md, USER.md, SOUL.md, People Index, Verification Gate, Taste Profile](docs/visual/hero.png)
+
+<sub>**▶ Interactive:** open [`docs/visual/index.html`](docs/visual/index.html) in a browser and drag to spin the memory graph. Every labelled node is a real file in this repo.</sub>
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Format](https://img.shields.io/badge/format-plain%20markdown-blue)
 ![Database](https://img.shields.io/badge/database-none%20needed-lightgrey)
