@@ -33,6 +33,8 @@
   .privchip{display:none;margin-top:10px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;
     color:#12101f;background:var(--gold);border-radius:999px;padding:4px 10px 5px;font-weight:700;width:max-content}
   body.private .privchip{display:block}
+  body.film header, body.film footer, body.film .hint, body.film #searchwrap,
+  body.film #card, body.film #tip, body.film .privchip{display:none!important}
   footer{position:fixed;left:40px;bottom:30px;z-index:5;pointer-events:none;
     font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,246,233,.55)}
   footer b{color:var(--coral);font-weight:600}
@@ -120,6 +122,8 @@
   var params = new URLSearchParams(location.search);
   var stillT = params.has("still") ? parseFloat(params.get("still")) : null;
   var showLabels = params.get("labels") !== "0";
+  var filmMode = params.get("film") === "1";
+  if (filmMode) document.body.classList.add("film");
 
   function boot(DATA){
     if (DATA.mode === "private") document.body.classList.add("private");
@@ -427,6 +431,7 @@
         lastAct = performance.now() + 1e9;
       },
       boost: function(n){ pulseBoost = n; },
+      dolly: function(d){ frameCamera._touched = true; camDistT = d; lastAct = performance.now() + 1e9; },
       clear: function(){ clearFocus(); }
     };
 
